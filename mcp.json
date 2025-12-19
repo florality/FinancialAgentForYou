@@ -1,0 +1,18 @@
+{
+  "servers": {
+    "alphavantage-stdio": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "./alpha_vantage_server.py"]
+    },
+    "alphavantage-http": {
+      "type": "http",
+      "url": "https://mcp.alphavantage.co/mcp?apikey=6OBFWXHCXLL9Y4JF"
+    },
+    "filesystem": {
+      "type": "stdio",
+      "command": "sh",
+      "args": ["-c", "npx -y @modelcontextprotocol/server-filesystem . 2>/dev/null"]
+    }
+  }
+}
